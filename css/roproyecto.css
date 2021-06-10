@@ -1,0 +1,523 @@
+*{
+  justify-content:center;
+  align-items: center;
+  align-content:auto;
+  box-sizing: border-box;/*todol los anchos y algos incluyen el pading y margin*/
+  font-family: 'Courgette', cursive;/*para modificar la fuente con google font*/
+}
+body{
+  margin: 0;
+  padding: 0;
+  background-color:black;
+}
+header{
+  background-color:black;
+  width: 100%;/*ancho del 100% de mi body*/
+  height: 30vh; /* tamaño de alto de mi header , con vh lo fijamo en tamaño segun la pantalla*/
+  }
+  .encabezado{
+    background: black;
+  display: flex;
+  width: 100%;
+  height: 100%;
+
+  }
+  .encabezado img{
+   display: flex;
+  width: 50%;
+  height: 50%;
+
+  }
+  .logo{
+  display:block;
+  width: 35%;
+  height: 100%;
+  }
+  /*como quiero que se vea la imagen de mi logo */
+  .logo img{
+  position:relative; /* Hacemos que la posición en pantalla sea fija para que siempre se muestre en pantalla*/
+  right:60%; /* Establecemos la barra en la izquierda o derecha */
+  top: 0px; /* Bajamos la barra cantidad de px de arriba a abajo */
+  width:100%;
+  height: 100%;
+  object-fit:contain;
+  }
+ 
+  .myMenu{
+  display:flex;
+  align-items:center;
+  z-index:2;
+}
+.myMenu label {
+  position:relative; /* Hacemos que la posición en pantalla sea fija para que siempre se muestre en pantalla*/
+  right:-200%; /* Establecemos la barra en la izquierda o derecha */
+  top: 0px; /* Bajamos la barra cantidad de px de arriba a abajo */
+  font-size:1cm;
+  width: 40px;
+  height:40px;
+  line-height: 38px;
+  text-align: center;
+  color: red;
+  cursor: pointer;
+  border: 2px solid red;
+  border-radius: 4px;/*redondeado en las esquinas*/
+  }
+  .menu{
+  flex-direction: row nowrap;/*direccion en columna*/
+  position:absolute;/*para q comiense del margen izq*/
+  top:19vh;/*para q comience desde abajo*/
+  left:0;
+  width:100%;
+  height:12.5;
+  background:rgba(51, 51, 51, 0.5);
+  transition: all 0.8s;/*ver com se desplaza*/
+  transform:translateX(-100%); /*traslade manera horizontal*/
+  z-index:100;
+}
+.menu a{
+  display: block;
+  color: #fff;
+  height: 58px;
+  text-decoration: none;
+  padding: 15px;
+  border-bottom: 1px solid rgba(250, 250, 250, 0.5);
+}
+.menu a:hover{/*efecto al pasarle el mause*/
+  background:rgba(500, 500, 200, 0.5);
+}
+#menu-bar:checked ~ .menu{/*aparesca con click el menu*/
+  transform: translateX(0);
+}
+section{
+  width: 100%;
+  margin-bottom: 25px;
+   border-top:5px solid red;
+}
+/*-----------------------------------------------*/
+/*main*/
+/*-----------------------------------------------*/
+main{
+  background-color: black;
+}
+#mycarousel{
+  width:100%;
+  height:auto;
+ min-height:10vh;
+  background: linear-gradient(-45deg, #d4d2cd 50%, #dbe3e6 50%);
+  font-family: 'Courgette', cursive;/*para modificar la fuente con google font*/
+}
+
+}
+h6{
+  text-align: center;
+  }/*hasta aca agrego*/
+.sabor{
+  color:#808B96;
+  margin: 2px 0;
+  font-size: 25px;
+  font-weight: 600;
+  text-shadow: 2px 2px 1px #fff;
+  font-family: sans-serif;
+  margin-top: 0;
+}
+.linea-division{
+  width: 80%;
+  height: 2px;
+  background-color:#99A3A4;
+}
+
+/*-----------------------------*/
+/* ESTILO DE materialize*/
+/*---------------------------*/
+.carousel{
+  min-height:400px;
+
+}
+.carousel .carousel-item{/*contenedos de los texto*/
+  display: flex;
+  flex-direction: column;/*se ponga uno debajop de otr*/
+  justify-content: center;
+  align-items: center;
+  user-select: none;/*cdo el usuario arrastra no puede seleccionar los texto;*/
+  /*background: #ccc; le quito el fodo xq no se ve bien lo puntas redondeadas q le puse abajo*/
+  width:2000px;/*cambio lñ tamaño preestablesido*/
+  height: 2000px;
+}
+.carousel .carousel-item img {
+ width: 100%;
+ height: 100%;
+ object-fit: cover;/*para q no se deforme la imagen*/
+ position: absolute;/*poner de fondo la imagen*/
+ top: 0;/*queremos ponerla la imagen arriba*/
+ left: 0;/*con una codedana de 0izq y ariba*/
+ z-index: -1;/*enviamos la imagen alfinal*/
+ border-radius: 15px;
+}
+.carousel .indicators .indicators-item{
+ border-radius: 0;
+ transform: rotate(45deg);
+ margin: 0 15px;
+ background: #36221c;
+}
+/*--------------------------*/
+/*datos*/
+/*---------------------------*/
+#datos{
+ margin:3 5%;
+ background-color: black;
+}
+.presentacion{
+  background-color: black;
+  font-size: 25px;
+  text-align: center;
+  border-top:5px solid red;
+
+}
+
+.presentacion h3{
+  margin: 0%  1% ;
+ background-color:black;
+ font-size: 30px;
+ font-family:sans-serif;
+ font-weight: 600;
+  text-shadow: 2px 2px 1px red;
+ 
+ text-decoration: underline;
+ color: yellow;
+
+}
+.presentacion p{
+  background-color:black;
+  font-family: serif;
+  color: white;
+  font-size: 55%;
+}
+div#datos.presentacion{
+   background-color:black;
+}
+.datos ul{
+  background-color:black;
+}
+.datos{
+text-align: center;
+  margin: 0%  1% ;
+ background-color: black;/* esto es el color dentro del texto de quienes somos*/
+ padding: 9% 3%;
+ font-size:20px;
+ font-family: sans-serif;
+ color: #fff;
+ border-top: 5px solid red;
+}
+
+.datos p{
+ margin-bottom:10px;
+}
+.presentacion img{
+ width: 4%;
+ height: 5%;
+
+}
+.mapa{
+  background-color: black;
+  display: flex;
+  align-items:center;
+  justify-content:center;
+
+   border-top: 5px solid red;
+
+}
+.mapa h3{
+  font-size: 120%;
+text-align: center;
+font-family:antiqua;
+text-decoration: underline;
+color: yellow;
+
+font-weight: 600;
+  text-shadow: 2px 2px 1px red;
+
+}
+#center{
+  display: flex;
+  align-items:center;
+  justify-content:center;
+ padding: 2% 2%;
+ background-color:black;
+ width:80%;
+ height:80%;
+ style="border:6%;
+ object-fit:contain;
+}
+#center iframe{
+  display: flex;
+  align-items:center;
+  justify-content:center;
+  width: 70%;
+  height: 50%;
+}
+
+/*---------------------------*/
+/*social*/
+/*-------------------------*/
+main{
+ display:flex;
+ background-color: black;
+}
+
+.social {
+ text-align:left;
+ height: 1400px;
+ position: fixed; /* Hacemos que la posición en pantalla sea fija para que siempre se muestre en pantalla*/
+ right:0; /* Establecemos la barra en la izquierda o derecha */
+ top: 260px; /* Bajamos la barra cantidad de px de arriba a abajo */
+ flex-wrap:wrap;
+ z-index: 2000; /* Utilizamos la propiedad z-index para que no se superponga algún otro elemento como sliders, galerías, etc */
+}
+
+.social ul {
+ list-style: none;
+}
+.social ul li a {
+ display: block;
+ color:#fff;
+ background: #000;
+ text-align:center;
+ font-style: oblique;
+ font-size: 0%;
+ padding: 0px 0px;
+ text-decoration: none;
+ -webkit-transition:all 500ms ease;
+ -o-transition:all 500ms ease;
+ transition:all 500ms ease; /* Establecemos una transición a todas las propiedades */
+}
+
+.social ul li .icon-facebook {background:#fff  ;} /* Establecemos los colores de cada red social, aprovechando su class */
+.social ul li .icon-instagram {background: #fff;}
+.social ul li .icon-whatsapp {background-color:#fff;}
+.social ul li .icon-mail { background: #fff  ;}
+
+.social ul li a:hover {
+ background: #A6ACAF; /* Cambiamos el fondo cuando el usuario pase el mouse */
+ /*padding: 0px 0px; /* Hacemos mas grande el espacio cuando el usuario pase el mouse */
+}
+.social img{
+ padding: 0%;
+ margin:0;
+ border: 0.4px solid black;
+ width: 35px;
+ height: 35px;
+}
+
+/*------------------------------------------------------------*/
+/*footer*/
+/*------------------------------------------------------------*/
+
+.galeria{
+    width: 100%;
+    background-color: black;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    border-top:5px solid red;
+    justify-content: center;
+}
+.foto img{
+    background-color: lightgray;
+    width: 55%;
+    height: 200px;
+    margin: 10% auto;
+    display: block;
+}
+.galeria h5{
+  text-decoration: underline;
+  font-family:antiqua;
+  font-size: 200%;
+  color:yellow;
+  text-shadow: 2px 2px 1px red;
+}
+
+footer{
+text-align: center;
+display:flex;
+margin: 1% 0%;
+padding:100 0;
+background-color:black;
+font-size: 9px;
+font-weight: 600;
+text-shadow: 2px 2px 1px red;
+font-family:sans-serif;
+color: yellow;
+width: -100%;
+height: 10vh;
+  border-top:5px solid red
+}
+/*.footer h4{
+  text-align: center;
+    margin: 0%  1% ;
+   padding: 1% 3%;
+   font-size:10px;
+   font-family: sans-serif;
+   color: #fff;*/
+}
+.footer h5{
+  margin: 6% 0;
+display: flex;
+justify-content:flex-end;
+font-size:9px;
+font-weight: 600;
+text-shadow: 2px 2px 1px #fff;
+font-family:arial;
+color: black;
+text-align: center;
+}
+
+                                      /*TAMAÑO TABLET*/
+
+              /* @media(min-width:768px) {
+  .logo img{
+  position:relative; /* Hacemos que la posición en pantalla sea fija para que siempre se muestre en pantalla*/
+  /*right:80%; /* Establecemos la barra en la izquierda o derecha */
+ /* top: 0px; /* Bajamos la barra cantidad de px de arriba a abajo */
+/*}
+footer{
+  height:20vh;
+}
+.footer h5{
+  margin: 3% 0;
+font-size:13px;
+}
+.foto img{
+  width: 40%;
+  height: 200px;
+   }
+   .galeria .foto img{
+    display: flex;*/
+
+   }
+
+  }        
+
+                             /* TAMAÑO PARA PC*/
+
+@media(min-width:1024px) {
+.myMenu label{
+ display:none;
+}
+.logo{
+ position: relative;
+ right:-15%;
+ top: 0;
+}
+.logo img{
+  position:relative; /* Hacemos que la posición en pantalla sea fija para que siempre se muestre en pantalla*/
+  right:70%; /* Establecemos la barra en la izquierda o derecha */
+  top: 0px; /* Bajamos la barra cantidad de px de arriba a abajo */
+  width:50%;
+  height: 100%;
+  object-fit:contain;
+  }
+  .encabezado img{
+   display: flex;
+  width: 50%;
+  height: 50%;
+
+.menu{
+  display: flex;
+  align-items:flex-end;
+ position: static;
+ width: auto;
+ height: auto;
+ transform: translateX(0%);/*no se traslade el menu*/
+ float:right;
+ display: flex;
+}
+.menu a {
+ border: none;
+}
+div#datos.presentacion{
+   background-color:;
+   height: 50vh;
+
+  }
+ .galeria h5{
+       margin: 0%  8% ;
+      text-decoration: center;
+       font-family: antiqua;
+     color: black;
+
+}
+.galeria{
+    margin: 0% 0%;
+    width: 100%;
+    background-color: black;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    border-top:5px solid black;
+    justify-content: center;
+    align-ite: center;
+  }
+
+.presentacion h4{
+  margin: 0%  1% ;
+ background-color:lightgray;
+ font-size: 50px;
+ font-family:sans-serif;
+ text-decoration: underline;
+ color: darkgray;
+
+}
+.presentacion p{
+  background-color:lightgray;
+  color: white;
+  }
+  .datos p{
+font-size: 50px;
+
+}
+.foto{
+  background-color: grey;
+  width: 20%;
+  height: 200px;
+   margin: 1% 1%;
+   display: flex;
+}
+.foto img{
+    background-color: lightgray;
+    width: 150%;
+    height: 150px;
+    margin: 1% 1%;
+    display:flex;
+    justify-content:space-around;
+    }
+   
+ footer{
+  display: flex;
+ width: -100%;
+height: 8vh;
+  margin-bottom: 25px;
+   border-top:5px solid black;
+}
+footer img{
+  width: 10%;
+  height: 100px;
+  display: block;
+  margin: auto;
+  }
+footer h5{
+  margin: 6% 0;
+display: flex;
+justify-content:flex-end;
+font-size:18px;
+font-family: sans-serif;
+color: #fff;
+}
+
+footer h4{
+  display: flex;
+   font-size:20px;
+  font-family: serif;
+   color: #fff;
+ }
+}
+
