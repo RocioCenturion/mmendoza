@@ -187,6 +187,8 @@ h6{
 
 }
 .presentacion p{
+  margin-right: 10%;
+  margin-left:8%; 
   background-color:black;
   font-family: serif;
   color: white;
@@ -227,13 +229,11 @@ text-align: center;
 
 }
 .mapa h3{
-  font-size: 120%;
-text-align: center;
+  font-size: 190%;
+  margin-left: 8%;
 font-family:antiqua;
 text-decoration: underline;
 color: yellow;
-
-font-weight: 600;
   text-shadow: 2px 2px 1px red;
 
 }
@@ -334,6 +334,7 @@ main{
   font-size: 200%;
   color:yellow;
   text-shadow: 2px 2px 1px red;
+
 }
 
 footer{
@@ -520,4 +521,6 @@ footer h4{
    color: #fff;
  }
 }
+
+
 
